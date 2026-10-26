@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+h5py
+rasterio
+pyarrow
+joblib
+scikit-learn==1.7.2   # RF.pkl was trained on 1.7.2
+xgboost               # use the version you trained with if you know it
+requests
+beautifulsoup4
+selenium>=4.6
+matplotlib

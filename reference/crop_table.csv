@@ -1,0 +1,15 @@
+crop_name,zr_min_m,zr_max_m,p,days_to_maturity,aliases
+Rice,0.5,1.0,0.20,,paddy
+Sesame,1.0,1.5,0.60,,til
+Sunflower,0.8,1.5,0.45,,
+Chick pea,0.6,1.0,0.50,,chickpea|gram|chana
+Beans,0.5,0.7,0.45,,bean
+Potato,0.4,0.6,0.35,,
+Watermelon,0.8,1.5,0.40,,
+Cucumber,0.7,1.2,0.50,,
+Pumpkin,1.0,1.5,0.35,,
+Egg Plant,0.7,1.2,0.45,,eggplant|eggplant (brinjal)|brinjal|baingan|aubergine
+Tomato,0.7,1.5,0.40,,
+Cabbage,0.5,0.8,0.45,,
+Carrots,0.5,1.0,0.35,,carrot
+Cauliflower,0.4,0.7,0.45,,

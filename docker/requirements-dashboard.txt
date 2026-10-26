@@ -1,0 +1,14 @@
+# Packages the dashboard needs (the daily SMAP pipeline keeps running on Windows and is NOT in this image).
+# Versions: use the ones from your working conda env "sm_pipeline" if they differ
+# (check with:  conda activate sm_pipeline  then  pip list | findstr /i "scikit xgboost pandas numpy pyarrow rasterio").
+flask
+gunicorn
+numpy
+pandas
+pyarrow
+joblib
+scikit-learn==1.7.2   # RF.pkl was trained on 1.7.2; the groundwater model (rf_gwe_final.pkl) must unpickle with the same version
+xgboost               # only needed if a model file is an XGBoost model; use the version you trained with
+rasterio
+requests
+selenium>=4.6         # imported by 02_scrape_rainfall_temp*.py (no browser is started by the dashboard)

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dashboard (Streamlit)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "dashboard/app.py", "--server.port", "8501"],
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Step 08 - irrigation advice (today)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/08_irrigation_advice.py",
+      "args": ["--gwl-file", "farm_inputs/gwl_today.csv"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

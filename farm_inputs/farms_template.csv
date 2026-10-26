@@ -1,0 +1,3 @@
+farm_id,lat,lon,area_ha,crop,irrigation_type,well_depth_m,well_radius_m,furrow_width_m,furrow_length_m,sprinkler_discharge_ls,sprinkler_spacing_m,lateral_spacing_m
+F001,20.3,85.8,0.68,Egg Plant,furrow,40,0.075,,,,,
+F002,20.31,85.81,0.5,Tomato,drip,,,,,,,

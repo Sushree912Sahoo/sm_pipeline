@@ -1,0 +1,21 @@
+# Put this file in the sm_pipeline folder (next to config.py).
+# Start:  docker compose up -d --build      Stop:  docker compose down
+services:
+  dashboard:
+    build: ./docker                 # small build context: your big data folders are never sent to Docker
+    image: sm-dashboard:latest
+    container_name: sm-dashboard
+    ports:
+      - "127.0.0.1:5000:5000"       # only this PC can open it; see the notes before exposing it to others
+    volumes:
+      - ./:/app:ro                  # your whole project, read-only (models, static, 03_downscaled_sm, rainfall files ...)
+    environment:
+      - DASHBOARD_PRELOAD=1
+      - TZ=Asia/Kolkata
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/api/options', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
